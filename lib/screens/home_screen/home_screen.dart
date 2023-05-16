@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
         () {
           questionCount = 0;
           quizButton = List.of(QuestionData.data[0].getShuffledAnswers());
+
           context.goNamed("Result");
         },
       );
