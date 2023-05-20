@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/resources/import_resources.dart';
-import '../../resources/resources.dart';
+import '../../widget/widget.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -37,20 +37,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   begin: Alignment.bottomRight)),
           child: Padding(
             padding: const EdgeInsets.all(15.0).w,
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    ProjectImage.appIconImage,
-                    height: 50.h,
-                  ),
-                  Text(
-                    "Quiz Master",
-                    style: TextStyle(
-                        fontSize: 25.sp, fontFamily: "BrunoAce"),
-                  )
-                ],),
+            child: const Center(
+              child: AppDesign(appBarTitle: "Quiz master"),
             ),
           ),
         ),
@@ -58,3 +46,4 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+

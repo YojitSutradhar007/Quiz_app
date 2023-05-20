@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../resources/import_resources.dart';
 import '../resources/resources.dart';
 
-class QuizApp extends StatefulWidget {
+class QuizApp extends StatelessWidget {
   const QuizApp({Key? key}) : super(key: key);
 
-  @override
-  State<QuizApp> createState() => _QuizAppState();
-}
-
-class _QuizAppState extends State<QuizApp> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -20,9 +14,8 @@ class _QuizAppState extends State<QuizApp> {
       builder: (context, child) {
         return MaterialApp.router(
           theme: ThemeData(
-            scaffoldBackgroundColor: const Color(0xff579bf5),
-            fontFamily: "CrimsonText"
-          ),
+              scaffoldBackgroundColor: ColorManager.grey200Color,
+              fontFamily: "CrimsonText"),
           debugShowCheckedModeBanner: false,
           routerConfig: routes,
         );
