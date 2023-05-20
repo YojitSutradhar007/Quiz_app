@@ -10,7 +10,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     super.initState();
@@ -18,12 +17,14 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigation() {
-    Duration duration = const Duration(seconds: 1);
-    Future.delayed(duration, () {
-      context.go("/HomePage");
-    });
+    Duration duration = const Duration(seconds: 2);
+    Future.delayed(
+      duration,
+      () {
+        context.go("/HomePage");
+      },
+    );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -46,4 +47,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
